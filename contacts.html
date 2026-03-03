@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты — Жансулу шоп</title>
+    <style>
+        /* Те же стили, что и на about.html */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            color: #212529;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #3b2e2a;
+            color: white;
+            padding: 20px 30px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .logo h1 {
+            font-size: 1.9rem;
+            letter-spacing: 2px;
+            font-weight: 400;
+        }
+        .logo span {
+            font-weight: 300;
+            font-size: 0.9rem;
+            display: block;
+            color: #e6c9a8;
+        }
+
+        nav {
+            display: flex;
+            gap: 28px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: #f0e9e5;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.2s;
+            font-size: 1.1rem;
+        }
+
+        nav a:hover {
+            color: #d4a373;
+        }
+
+        .page-header {
+            background: linear-gradient(135deg, #5f6c7a 0%, #3b4b5e 100%);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .page-header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            font-weight: 300;
+        }
+
+        .page-header p {
+            font-size: 1.3rem;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 60px 30px;
+        }
+
+        .contact-section {
+            background-color: white;
+            border-radius: 30px;
+            padding: 50px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+        }
+
+        .contact-section h2 {
+            font-size: 2.2rem;
+            color: #3b2e2a;
+            margin-bottom: 30px;
+            font-weight: 400;
+            border-left: 6px solid #c66b3d;
+            padding-left: 20px;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .contact-info p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .contact-icon {
+            font-size: 1.8rem;
+            min-width: 40px;
+        }
+
+        .map-placeholder {
+            background-color: #e9e0d9;
+            height: 250px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #7b6b60;
+            font-size: 1.2rem;
+            margin-top: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #c66b3d;
+            color: white;
+            padding: 14px 36px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.2rem;
+            transition: 0.25s;
+            margin-top: 20px;
+        }
+
+        .btn:hover {
+            background-color: #a84f2a;
+        }
+
+        footer {
+            background-color: #2a221f;
+            color: #d9cdc2;
+            padding: 50px 30px 30px;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            max-width: 1300px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+
+        .footer-block h4 {
+            color: #e9d5c0;
+            margin-bottom: 18px;
+            font-size: 1.3rem;
+        }
+
+        .footer-block p, .footer-block a {
+            color: #bcafa4;
+            text-decoration: none;
+            line-height: 2;
+        }
+
+        .footer-block a:hover {
+            color: #d4a373;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 40px;
+            font-size: 0.95rem;
+            color: #9b8c80;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Жансулу шоп</h1>
+            <span>стиль и качество</span>
+        </div>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="index.html#products">Товары</a>
+            <a href="about.html">О нас</a>
+            <a href="contacts.html">Контакты</a>
+        </nav>
+    </header>
+
+    <div class="page-header">
+        <h1>Контакты</h1>
+        <p>Всегда на связи</p>
+    </div>
+
+    <div class="container">
+        <div class="contact-section">
+            <h2>Как с нами связаться</h2>
+            
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <p>
+                        <span class="contact-icon">👤</span>
+                        <strong>ИП Аймагамбетова Жансулу Аймагамбетова</strong>
+                    </p>
+                    <p>
+                        <span class="contact-icon">📍</span>
+                        г. Астана, пр. Тауелсиздик, 34<br>Бутик "Жансулу шоп", 1 этаж
+                    </p>
+                    <p>
+                        <span class="contact-icon">📞</span>
+                        +7 (7172) 55-44-33<br>
+                        +7 701 555 2323 (WhatsApp)
+                    </p>
+                    <p>
+                        <span class="contact-icon">✉️</span>
+                        zhansulu_shop@mail.kz<br>
+                        zhansulu.style@mail.kz
+                    </p>
+                    <p>
+                        <span class="contact-icon">🕒</span>
+                        Ежедневно: 10:00 – 21:00<br>
+                        Без выходных
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 style="margin-bottom: 20px; color: #3b2e2a;">Мы на карте</h3>
+                    <div class="map-placeholder">
+                        🗺️ Здесь будет карта (Яндекс Карты / Google Maps)
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="index.html#products" class="btn">Перейти к покупкам</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-block">
+                <h4>Жансулу шоп</h4>
+                <p>Магазин стильной одежды и аксессуаров в Астане.</p>
+            </div>
+            <div class="footer-block">
+                <h4>Контакты</h4>
+                <p>📍 пр. Тауелсиздик, 34, Астана</p>
+                <p>📞 +7 (7172) 55-44-33</p>
+                <p>📧 zhansulu_shop@mail.kz</p>
+            </div>
+            <div class="footer-block">
+                <h4>Информация</h4>
+                <p><a href="about.html">О нас</a></p>
+                <p><a href="contacts.html">Контакты</a></p>
+                <p><a href="index.html#products">Каталог</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © 2025 Жансулу шоп. Все права защищены.
+        </div>
+    </footer>
+</body>
+</html>
