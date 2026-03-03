@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О нас — Жансулу шоп</title>
+    
+    <!-- Microsoft Clarity -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "vq39pn05kr");
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            color: #212529;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #3b2e2a;
+            color: white;
+            padding: 20px 30px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .logo h1 {
+            font-size: 1.9rem;
+            letter-spacing: 2px;
+            font-weight: 400;
+        }
+        .logo span {
+            font-weight: 300;
+            font-size: 0.9rem;
+            display: block;
+            color: #e6c9a8;
+        }
+
+        nav {
+            display: flex;
+            gap: 28px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: #f0e9e5;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.2s;
+            font-size: 1.1rem;
+        }
+
+        nav a:hover {
+            color: #d4a373;
+        }
+
+        .page-header {
+            background: linear-gradient(135deg, #d4a373 0%, #b07d62 100%);
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .page-header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+            font-weight: 300;
+        }
+
+        .page-header p {
+            font-size: 1.4rem;
+            opacity: 0.95;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 30px;
+        }
+
+        .about-card {
+            background-color: white;
+            border-radius: 30px;
+            padding: 50px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+        }
+
+        .about-card h2 {
+            font-size: 2.4rem;
+            color: #3b2e2a;
+            margin-bottom: 30px;
+            font-weight: 400;
+            border-left: 6px solid #c66b3d;
+            padding-left: 25px;
+        }
+
+        .about-card h3 {
+            font-size: 1.8rem;
+            color: #4a3f3a;
+            margin: 30px 0 20px;
+            font-weight: 400;
+        }
+
+        .about-card p {
+            font-size: 1.2rem;
+            margin-bottom: 25px;
+            color: #2d3e40;
+            line-height: 1.8;
+        }
+
+        .about-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .founder-section {
+            background-color: #faf3ed;
+            border-radius: 30px;
+            padding: 50px;
+            margin: 50px 0;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .founder-photo {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #d4a373, #b07d62);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 5rem;
+            color: white;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+            flex-shrink: 0;
+        }
+
+        .founder-info {
+            flex: 1;
+        }
+
+        .founder-info h3 {
+            font-size: 2.2rem;
+            color: #3b2e2a;
+            margin-bottom: 10px;
+        }
+
+        .founder-info .position {
+            color: #c66b3d;
+            font-weight: 600;
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+
+        .founder-info p {
+            font-size: 1.2rem;
+            color: #4a3f3a;
+            line-height: 1.8;
+            font-style: italic;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin: 50px 0;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, #faf3ed, #f5e8de);
+            padding: 35px 20px;
+            border-radius: 20px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #c66b3d;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 1.2rem;
+            color: #4a3f3a;
+            font-weight: 500;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .value-card {
+            background-color: #f9f0e9;
+            padding: 35px 25px;
+            border-radius: 20px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .value-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        .value-icon {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+
+        .value-card h4 {
+            font-size: 1.5rem;
+            color: #3b2e2a;
+            margin-bottom: 15px;
+        }
+
+        .value-card p {
+            color: #5f5b58;
+            line-height: 1.6;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .team-card {
+            background-color: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .team-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+
+        .team-photo {
+            width: 100%;
+            height: 220px;
+            background: linear-gradient(135deg, #e6c9a8, #d4a373);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 4rem;
+            color: white;
+        }
+
+        .team-info {
+            padding: 25px 15px;
+        }
+
+        .team-info h4 {
+            font-size: 1.4rem;
+            color: #3b2e2a;
+            margin-bottom: 8px;
+        }
+
+        .team-info .role {
+            color: #c66b3d;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+
+        .team-info p {
+            color: #6b5b53;
+            font-size: 0.95rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #c66b3d;
+            color: white;
+            padding: 15px 40px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.2rem;
+            transition: 0.25s;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(198, 107, 61, 0.3);
+            margin-top: 20px;
+        }
+
+        .btn:hover {
+            background-color: #a84f2a;
+            transform: scale(1.02);
+            box-shadow: 0 8px 20px rgba(168, 79, 42, 0.4);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid #c66b3d;
+            color: #c66b3d;
+            box-shadow: none;
+            margin-left: 20px;
+        }
+
+        .btn-outline:hover {
+            background-color: #c66b3d;
+            color: white;
+        }
+
+        footer {
+            background-color: #2a221f;
+            color: #d9cdc2;
+            padding: 50px 30px 30px;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            max-width: 1300px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+
+        .footer-block h4 {
+            color: #e9d5c0;
+            margin-bottom: 18px;
+            font-size: 1.3rem;
+        }
+
+        .footer-block p, .footer-block a {
+            color: #bcafa4;
+            text-decoration: none;
+            line-height: 2;
+        }
+
+        .footer-block a:hover {
+            color: #d4a373;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 40px;
+            font-size: 0.95rem;
+            color: #9b8c80;
+            border-top: 1px solid #3b322c;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            
+            .founder-section {
+                flex-direction: column;
+                text-align: center;
+                padding: 30px;
+            }
+            
+            .about-card {
+                padding: 30px 20px;
+            }
+            
+            .page-header h1 {
+                font-size: 2.5rem;
+            }
+            
+            .btn-outline {
+                margin-left: 0;
+                margin-top: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Жансулу шоп</h1>
+            <span>стиль и качество</span>
+        </div>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="index.html#products">Товары</a>
+            <a href="about.html">О нас</a>
+            <a href="contacts.html">Контакты</a>
+        </nav>
+    </header>
+
+    <div class="page-header">
+        <h1>О нас</h1>
+        <p>История любви к моде и качеству</p>
+    </div>
+
+    <div class="container">
+        <!-- Основная информация -->
+        <div class="about-card">
+            <h2>Добро пожаловать в Жансулу шоп</h2>
+            <p>Жансулу шоп — это не просто магазин одежды. Это пространство, где каждая деталь продумана, чтобы вы чувствовали себя уверенно, стильно и комфортно. Мы открыли свои двери в 2020 году в самом сердце Астаны, и с тех пор наш бутик стал любимым местом для ценителей качественной одежды и аксессуаров.</p>
+            
+            <p>Наша миссия — делать моду доступной, но при этом сохранять высокое качество и индивидуальный подход к каждому клиенту. Мы тщательно отбираем каждую вещь, сотрудничая с производителями из Турции, Италии и Казахстана. В нашем ассортименте вы найдете всё: от базовых футболок до вечерних платьев, от стильных аксессуаров до удобной обуви.</p>
+            
+            <p>Мы верим, что одежда — это способ самовыражения. Поэтому в нашем магазине вы всегда найдете что-то особенное, что подчеркнет вашу индивидуальность.</p>
+        </div>
+
+        <!-- Блок основательницы -->
+        <div class="founder-section">
+            <div class="founder-photo">
+                👩‍💼
+            </div>
+            <div class="founder-info">
+                <h3>Аймагамбетова Жансулу Аймагамбетова</h3>
+                <div class="position">Основательница и креативный директор</div>
+                <p>"Я всегда мечтала создать место, где люди будут находить не просто одежду, а настроение и вдохновение. Каждая коллекция в нашем магазине — это результат большой любви и внимания к деталям. Я лично участвую в отборе каждой модели, потому что для меня важно, чтобы наши клиенты уходили счастливыми и возвращались снова. Жансулу шоп — это моя душа, воплощенная в тканях и фасонах."</p>
+            </div>
+        </div>
+
+        <!-- Цифры и факты -->
+        <div class="about-card">
+            <h2>Мы в цифрах</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">5000+</div>
+                    <div class="stat-label">довольных клиентов</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">4 года</div>
+                    <div class="stat-label">успешной работы</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label">стран-поставщиков</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">натуральные ткани</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Наши ценности -->
+        <div class="about-card">
+            <h2>Наши ценности</h2>
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">❤️</div>
+                    <h4>Любовь к деталям</h4>
+                    <p>Мы обращаем внимание на каждую мелочь: от качества швов до красивой упаковки вашего заказа.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🤝</div>
+                    <h4>Честность и прозрачность</h4>
+                    <p>Только настоящие ткани, честные цены и открытое общение с каждым покупателем.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">✨</div>
+                    <h4>Индивидуальный подход</h4>
+                    <p>Мы помогаем найти именно ту вещь, которая подчеркнет ваш уникальный стиль.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🌿</div>
+                    <h4>Экологичность</h4>
+                    <p>Поддерживаем осознанное потребление и выбираем экологичные материалы.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Наша команда -->
+        <div class="about-card">
+            <h2>Наша команда</h2>
+            <p>За каждым успешным магазином стоит команда профессионалов. Мы гордимся людьми, которые работают в Жансулу шоп и делают ваш шопинг незабываемым.</p>
+            
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-photo">👗</div>
+                    <div class="team-info">
+                        <h4>Айгерим Нурланова</h4>
+                        <div class="role">Стилист-консультант</div>
+                        <p>Поможет подобрать идеальный образ для любого случая</p>
